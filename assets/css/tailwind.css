@@ -1,0 +1,57 @@
+/* tailwind.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 自定义变量 */
+:root {
+    --color-button: #39D1AA;
+    --color-button-sm: #14293B;
+
+    --color-text-primary: #323232;
+    --color-text-secondary: #A5A5A5;
+    /* banner文字颜色 */
+    --color-text-banner: #14293B;
+    /* 二级banner文字颜色 */
+    --color-text-banner-sm: #8E8E8E;
+    --color-text-hover: #2B9B81;
+}
+
+
+/* Custom CSS */
+@layer components {
+    html {
+        @apply font-sans;
+    }
+
+    button {
+        background-color: var(--color-button);
+        @apply text-white px-5 py-3 rounded-md;
+    }
+
+    .button-sm {
+        background-color: var(--color-button-sm);
+        @apply text-white text-sm px-2 py-2 rounded-md;
+    }
+
+    h1 {
+        @apply text-4xl font-bold leading-10;
+    }
+
+    h2 {
+        @apply text-3xl font-bold leading-8;
+    }
+
+    h3 {
+        @apply text-2xl font-semibold leading-7;
+    }
+
+    .text-banner {
+        @apply text-xl leading-7;
+    }
+
+    .text-notes {
+        color: var(--color-text-secondary);
+        @apply text-xs;
+    }
+}
